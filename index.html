@@ -26,21 +26,22 @@
     ></script>
   </head>
   <body>
-    <section class="units">
-      <button id="celsius-button">C°</button>
-      <button id="fahrenheit-button">F°</button>
-    </section>
-    <div class="container">
-      <header>
-        <form id="search-city">
-          <input type="text" id="city-input" placeholder="Type the city" />
-          <input type="submit" value="Search" class="btn btn-primary" />
-          <input type="submit" value="My city" />
-        </form>
+    <header>
+      <section class="units">
+        <button id="celsius-button">C°</button>
+        <button id="fahrenheit-button">F°</button>
+      </section>
 
-        <h1>Kyiv</h1>
-      </header>
+      <form id="search-city">
+        <input type="text" id="city-input" placeholder="Type the city" />
+        <input type="submit" value="Search" class="btn btn-primary" />
+        <input type="submit" value="My city" />
+      </form>
+    </header>
+    <div class="container">
       <div class="wrapper">
+        <h1>Kyiv</h1>
+        <hr />
         <h2 id="day-time">Thu, August 25, 20:39</h2>
         <hr />
         <div class="inner-info">
@@ -48,11 +49,11 @@
             <div class="col-6">
               <h1>21 <span id="celsius-sign">°C</span></h1>
             </div>
-            <div class="col-6">
+            <div class="col-6 picture-main">
               <img
                 src="https://i.pinimg.com/originals/34/cf/da/34cfda2023e6a05c7b429e83d52ee74f.gif"
                 alt="sunny"
-                width="100"
+                width="120"
               />
             </div>
           </div>
@@ -63,13 +64,14 @@
                 <li>Humidity: <span>87</span>%</li>
               </ul>
             </div>
-            <div class="col-6">
+            <div class="col-6 right-section">
               <ul>
                 <li>Max temp 20°C</li>
                 <li>Min tempo 10°C</li>
               </ul>
             </div>
           </div>
+          <hr />
           <div class="row">
             <div class="col-3">
               <p>Fri</p>
@@ -97,11 +99,16 @@
       <footer>
         <p>Open-source project by Anastasiia</p>
 
-        <a href="https://github.com/johannes-kraisler/green-weather-app">
+        <a
+          href="https://github.com/johannes-kraisler/green-weather-app"
+          target="_blank"
+        >
           <i class="fa-brands fa-github"> </i
         ></a>
 
-        <a href="https://www.linkedin.com/in/anastasiia-lemish-b85523184/"
+        <a
+          href="https://www.linkedin.com/in/anastasiia-lemish-b85523184/"
+          target="_blank"
           ><i class="fa-brands fa-linkedin"></i>
         </a>
       </footer>

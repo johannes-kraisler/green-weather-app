@@ -1,5 +1,5 @@
 body {
-  background-image: url("pictures/pic1.jpeg");
+  background-image: url("pictures/pic3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Indie Flower", cursive;
@@ -7,33 +7,36 @@ body {
 .container {
   width: 600px;
   display: block;
-  margin: 40px auto;
+  margin: auto;
 }
 .wrapper {
   border: 1px solid #3a9679;
-  border-radius: 10px;
+  border-radius: 80px;
+  box-shadow: 1px 1px 15px;
 
-  background-color: #e2efd7;
+  background-color: #fff9ea;
 }
 header {
-  text-align: center;
+  text-align: right;
 }
 h1,
 h2,
 p,
 li {
-  color: #11144c;
+  color: #296056;
 }
 
 h1 {
   font-family: "Pacifico", cursive;
-  font-size: 40px;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
 }
 h2 {
-  background-color: #cfe1c2;
   padding: 20px;
   margin: 0;
   font-size: 24px;
+  background-color: antiquewhite;
 }
 p {
   font-size: 24px;
@@ -44,7 +47,15 @@ hr {
 .inner-info {
   margin: 40px;
 }
-
+.right-section {
+  text-align: right;
+  position: relative;
+  right: 38px;
+}
+.picture-main {
+  position: relative;
+  right: -20px;
+}
 #day-time {
   text-align: center;
 }

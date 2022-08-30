@@ -1,16 +1,7 @@
 body {
-  background-image: url("pic1.png");
-}
-header {
-  text-align: center;
-}
-
-footer {
-  text-align: center;
-  margin: 30px;
-}
-i {
-  font-size: 30px;
+  background-image: url("pictures/pic1.jpeg");
+  background-image: opacity 200px;
+  font-family: "Indie Flower", cursive;
 }
 .container {
   width: 600px;
@@ -20,5 +11,50 @@ i {
 .wrapper {
   border: 1px solid #3a9679;
   border-radius: 10px;
-  padding: 40px;
+
+  background-color: #e2efd7;
+}
+header {
+  text-align: center;
+}
+h1,
+h2,
+p,
+li {
+  color: #11144c;
+}
+
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 40px;
+}
+h2 {
+  background-color: #cfe1c2;
+  padding: 20px;
+  margin: 0;
+  font-size: 24px;
+}
+p {
+  font-size: 24px;
+}
+hr {
+  margin: 0;
+}
+.inner-info {
+  margin: 40px;
+}
+
+#day-time {
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+footer {
+  text-align: center;
+  margin: 30px;
+}
+footer i {
+  font-size: 30px;
+  color: #3a9679;
 }

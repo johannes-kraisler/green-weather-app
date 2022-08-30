@@ -1,6 +1,7 @@
 body {
   background-image: url("pictures/pic1.jpeg");
-  background-image: opacity 200px;
+  background-repeat: no-repeat;
+  background-size: cover;
   font-family: "Indie Flower", cursive;
 }
 .container {

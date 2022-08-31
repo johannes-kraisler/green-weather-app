@@ -26,21 +26,39 @@
     ></script>
   </head>
   <body>
-    <header>
-      <section class="units">
-        <button id="celsius-button">C°</button>
-        <button id="fahrenheit-button">F°</button>
-      </section>
+    <div class="container header">
+      <div class="row">
+        <div class="col-4"></div>
 
-      <form id="search-city">
-        <input type="text" id="city-input" placeholder="Type the city" />
-        <input type="submit" value="Search" class="btn btn-primary" />
-        <input type="submit" value="My city" />
-      </form>
-    </header>
-    <div class="container">
+        <div class="col-8">
+          <form id="search-city">
+            <input
+              type="text"
+              id="city-input"
+              placeholder="Type the city"
+              autofocus
+            />
+            <input
+              type="submit"
+              value="Search"
+              class="btn btn-success search"
+            />
+            <input
+              type="submit"
+              value="My city"
+              class="btn btn-success my-city"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container main-body">
       <div class="wrapper">
         <h1>Kyiv</h1>
+        <section class="units">
+          <button id="celsius-button" class="btn btn-success">C°</button>
+          <button id="fahrenheit-button" class="btn btn-success">F°</button>
+        </section>
         <hr />
         <h2 id="day-time">Thu, August 25, 20:39</h2>
         <hr />
@@ -72,7 +90,7 @@
             </div>
           </div>
           <hr />
-          <div class="row">
+          <div class="row weather-days">
             <div class="col-3">
               <p>Fri</p>
               <i class="fa-solid fa-sun sunny"></i>

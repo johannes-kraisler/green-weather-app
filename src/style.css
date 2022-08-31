@@ -3,27 +3,15 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Indie Flower", cursive;
+  margin-top: 40px;
 }
-.container {
-  width: 600px;
-  display: block;
-  margin: auto;
+form {
+  font-size: large;
 }
-.wrapper {
-  border: 1px solid #3a9679;
-  border-radius: 80px;
-  box-shadow: 1px 1px 15px;
-
-  background-color: #fff9ea;
-}
-header {
-  text-align: right;
-}
-h1,
 h2,
 p,
 li {
-  color: #296056;
+  color: #392f2f;
 }
 
 h1 {
@@ -31,18 +19,49 @@ h1 {
   font-size: 50px;
   text-align: center;
   padding: 20px;
+  margin-bottom: -40px;
+  color: #3a7563;
 }
 h2 {
   padding: 20px;
   margin: 0;
   font-size: 24px;
-  background-color: antiquewhite;
+  background-color: #e9f5f3;
 }
 p {
   font-size: 24px;
 }
 hr {
   margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+footer {
+  text-align: center;
+  margin: 30px;
+}
+footer i {
+  font-size: 30px;
+  color: #ff7e67;
+}
+.container {
+  width: 600px;
+  display: block;
+  margin: auto;
+}
+.wrapper {
+  border: 1px solid #392f2f;
+  border-radius: 80px;
+  box-shadow: 1px 1px 15px;
+
+  background-color: #ffffff;
+}
+.header {
+  text-align: right;
+  position: relative;
+  right: -400px;
 }
 .inner-info {
   margin: 40px;
@@ -59,14 +78,21 @@ hr {
 #day-time {
   text-align: center;
 }
-ul {
-  list-style: none;
+.units {
+  text-align: right;
+  position: relative;
+  top: -30px;
+  right: 40px;
+  margin: 0;
+  padding: 0;
 }
-footer {
+.weather-days {
+  margin-top: 10px;
   text-align: center;
-  margin: 30px;
 }
-footer i {
-  font-size: 30px;
-  color: #3a9679;
+.search,
+#celsius-button,
+.my-city,
+#fahrenheit-button {
+  background-color: #ff7e67;
 }

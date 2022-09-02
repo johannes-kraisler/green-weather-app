@@ -96,3 +96,10 @@ footer i {
 #fahrenheit-button {
   background-color: #ff7e67;
 }
+
+li:first-letter {
+  text-transform: capitalize;
+}
+#main-city:first-letter {
+  text-transform: capitalize;
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather app ☀️</title>
+    <title>☀️ Weather app</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -19,6 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <script
       src="https://kit.fontawesome.com/ebefd15b6f.js"
@@ -38,13 +39,15 @@
               placeholder="Type the city"
               autofocus
             />
+
             <input
               type="submit"
+              id="submit-button"
               value="Search"
               class="btn btn-success search"
             />
             <input
-              type="submit"
+              type="button"
               value="My city"
               class="btn btn-success my-city"
             />
@@ -54,7 +57,7 @@
     </div>
     <div class="container main-body">
       <div class="wrapper">
-        <h1>Kyiv</h1>
+        <h1 id="main-city"></h1>
         <section class="units">
           <button id="celsius-button" class="btn btn-success">C°</button>
           <button id="fahrenheit-button" class="btn btn-success">F°</button>
@@ -65,7 +68,7 @@
         <div class="inner-info">
           <div class="row">
             <div class="col-6">
-              <h1>21 <span id="celsius-sign">°C</span></h1>
+              <h1><span id="temperature-now"></span>°C</h1>
             </div>
             <div class="col-6 picture-main">
               <img
@@ -78,14 +81,14 @@
           <div class="row">
             <div class="col-6">
               <ul>
-                <li>Clear sky</li>
-                <li>Humidity: <span>87</span>%</li>
+                <li id="description"></li>
+                <li>Humidity: <span id="humidity"></span> %</li>
               </ul>
             </div>
             <div class="col-6 right-section">
               <ul>
-                <li>Max temp 20°C</li>
-                <li>Min tempo 10°C</li>
+                <li>Max temp <span id="max-temp">20</span> °C</li>
+                <li>Min temp <span id="min-temp">10</span> °C</li>
               </ul>
             </div>
           </div>

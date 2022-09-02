@@ -1,4 +1,4 @@
-let city = "Kyiv";
+let city = "new york";
 let key = "b5d468da4868eefa0bc957f375b485fb";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`;
 
@@ -17,9 +17,13 @@ function showTemperature(response) {
   minTempEl.innerHTML = Math.round(response.data.main.temp_min);
   let city = document.querySelector("#main-city");
   city.innerHTML = response.data.name;
-
   let timeEl = document.querySelector("#day-time");
   timeEl.innerHTML = getDayTime(response.data.dt * 1000);
+  let iconEl = document.querySelector("#icon-main");
+  iconEl.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
 }
 axios.get(apiUrl).then(showTemperature);
 

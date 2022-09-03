@@ -1,13 +1,20 @@
 // city search
+
+let inputEl = document.querySelector("#city-input");
+let cityEl = document.querySelector("#main-city");
+let defaultCity = "Kyiv";
+cityEl.innerHTML = defaultCity;
+searchCity(defaultCity);
+
 let searchFormEl = document.querySelector("#search-city");
 searchFormEl.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
   event.preventDefault();
-  let inputEl = document.querySelector("#city-input");
-  let cityEl = document.querySelector("#main-city");
+
+  cityEl.innerHTML = inputEl.value;
+
   if (inputEl.value.length > 0) {
-    cityEl.innerHTML = inputEl.value;
     searchCity(cityEl.innerHTML);
   } else {
     cityEl.innerHTML = "Your city?";

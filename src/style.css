@@ -103,3 +103,7 @@ li:first-letter {
 #main-city:first-letter {
   text-transform: capitalize;
 }
+#forecast {
+  margin-top: 15px;
+  margin-bottom: -20px;
+}

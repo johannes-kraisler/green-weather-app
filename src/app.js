@@ -106,3 +106,25 @@ function changeToCel() {
 let celsiusTemperature = null;
 let celsiusButton = document.querySelector("#celsius-button");
 celsiusButton.addEventListener("click", changeToCel);
+
+// forecast
+
+function displayForecast() {
+  let forecastEl = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row weather-days"> `;
+  let days = ["Mon", "Tue", "Wed", "Thu"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+    <div class="col-3">
+        <p>${day}</p>
+        <i class="fa-solid fa-sun sunny"></i>
+        <p><strong>33°</strong> 20°</p>
+    </div>`;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastEl.innerHTML = forecastHTML;
+}
+displayForecast();

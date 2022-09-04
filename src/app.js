@@ -160,3 +160,19 @@ function formatDate(timestamp) {
 
   return days[day];
 }
+
+function handlePosition(position) {
+  let lon = position.coords.longitude;
+  let lat = position.coords.latitude;
+
+  let key = "b5d468da4868eefa0bc957f375b485fb";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+  axios.get(apiUrl).then(showTemperature);
+}
+
+function showCurrentCity(position) {
+  navigator.geolocation.getCurrentPosition(handlePosition);
+}
+
+let buttonCurrentCity = document.querySelector("#my-city");
+buttonCurrentCity.addEventListener("click", showCurrentCity);

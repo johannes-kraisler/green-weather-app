@@ -53,7 +53,17 @@ function showTemperature(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  //forecast
+  getForecast(response.data.coord);
 }
+
+function getForecast(coordinates) {
+  let key = "562f5cd9cac04a0ceac338ac4e531d8c";
+  let urlApi = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric`;
+
+  axios.get(urlApi).then(displayForecast);
+}
+
 // time
 
 function getDayTime(timestamp) {
@@ -109,7 +119,8 @@ celsiusButton.addEventListener("click", changeToCel);
 
 // forecast
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastEl = document.querySelector("#forecast");
   let forecastHTML = `<div class="row weather-days"> `;
   let days = ["Mon", "Tue", "Wed", "Thu"];
@@ -127,4 +138,3 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastEl.innerHTML = forecastHTML;
 }
-displayForecast();

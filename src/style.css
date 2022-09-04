@@ -107,3 +107,7 @@ li:first-letter {
   margin-top: 15px;
   margin-bottom: -20px;
 }
+
+strong {
+  text-shadow: 0.5px 1px black;
+}

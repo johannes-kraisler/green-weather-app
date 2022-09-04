@@ -77,8 +77,17 @@ function getDayTime(timestamp) {
     minutes = `0${minutes}`;
   }
   let date = currentDate.getDate();
-  let days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[currentDate.getDay()];
+
   let months = [
     "January",
     "February",
@@ -120,21 +129,34 @@ celsiusButton.addEventListener("click", changeToCel);
 // forecast
 
 function displayForecast(response) {
-  console.log(response.data.daily);
+  let forecastDaily = response.data.daily;
   let forecastEl = document.querySelector("#forecast");
   let forecastHTML = `<div class="row weather-days"> `;
-  let days = ["Mon", "Tue", "Wed", "Thu"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `
+
+  forecastDaily.forEach(function (forecastDay, index) {
+    if (index < 4) {
+      forecastHTML =
+        forecastHTML +
+        `
     <div class="col-3">
-        <p>${day}</p>
-        <i class="fa-solid fa-sun sunny"></i>
-        <p><strong>33°</strong> 20°</p>
+        <p>${formatDate(forecastDay.dt)}</p>
+        <img src="http://openweathermap.org/img/wn/${
+          forecastDay.weather[0].icon
+        }@2x.png" width="40" />
+        <p><strong>${Math.round(forecastDay.temp.max)}°</strong> ${Math.round(
+          forecastDay.temp.min
+        )}°</p>
     </div>`;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastEl.innerHTML = forecastHTML;
+}
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let day = date.getDay();
+
+  return days[day];
 }

@@ -59,9 +59,7 @@ footer i {
   background-color: #ffffff;
 }
 .header {
-  text-align: right;
-  position: relative;
-  right: -400px;
+  margin: 40px;
 }
 .inner-info {
   margin: 40px;
@@ -110,4 +108,8 @@ li:first-letter {
 
 strong {
   text-shadow: 0.5px 1px black;
+}
+
+@media (max-width: 600px) {
+  body: smaller;
 }

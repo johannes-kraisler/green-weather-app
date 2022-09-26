@@ -29,33 +29,27 @@
   <body>
     <div class="container main-body">
       <div class="container header">
-        <div class="row">
-          <div class="col-4"></div>
+        <form id="search-city">
+          <input
+            type="text"
+            id="city-input"
+            placeholder="Type the city"
+            autofocus
+          />
 
-          <div class="col-8">
-            <form id="search-city">
-              <input
-                type="text"
-                id="city-input"
-                placeholder="Type the city"
-                autofocus
-              />
-
-              <input
-                type="submit"
-                id="submit-button"
-                value="Search"
-                class="btn btn-success search"
-              />
-              <input
-                type="button"
-                value="My city"
-                class="btn btn-success my-city"
-                id="my-city"
-              />
-            </form>
-          </div>
-        </div>
+          <input
+            type="submit"
+            id="submit-button"
+            value="Search"
+            class="btn btn-success search"
+          />
+          <input
+            type="button"
+            value="My city"
+            class="btn btn-success my-city"
+            id="my-city"
+          />
+        </form>
       </div>
       <div class="wrapper">
         <h1 id="main-city"></h1>

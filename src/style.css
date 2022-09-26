@@ -111,5 +111,48 @@ strong {
 }
 
 @media (max-width: 600px) {
-  body: smaller;
+  h1 {
+    font-size: 25px;
+  }
+  h2,
+  p {
+    font-size: 18px;
+    margin-bottom: 50px;
+  }
+
+  div.inner-info {
+    margin: 10px 0;
+  }
+  div.wrapper {
+    width: fit-content;
+    margin-right: 0 !important;
+  }
+
+  button {
+    padding: 5px !important ;
+  }
+  footer {
+    text-align: justify;
+    margin: 30px 0;
+  }
+
+  footer a {
+    position: relative;
+    left: 90px;
+  }
+
+  header {
+    font-size: smaller;
+    display: flex;
+    justify-content: right;
+    padding-left: 0;
+  }
+  .icon-main {
+    font-size: smaller;
+    position: relative;
+    right: 0;
+  }
+  .units {
+    margin-top: 20px;
+  }
 }
